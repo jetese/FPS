@@ -30,7 +30,6 @@ public class Shoot : MonoBehaviour
     /// <summary>
     /// Tiempo transcurrido entre disparos
     /// </summary>
-    [System.NonSerialized]
 	public float m_TimeBetweenShots = 0.25f;
 	
 	/// <summary>
@@ -134,6 +133,11 @@ public class Shoot : MonoBehaviour
             // ## TO-DO 8 Parar sonido de disparo.
             audioSource.Stop();
         }
+        else
+        {
+            this.transform.Rotate(suma, 0.0f, 0.0f);
+            suma -= suma;
+        }
 
     }
 	
@@ -224,7 +228,7 @@ public class Shoot : MonoBehaviour
     private void BackWeaponMove(){
         if (Mathf.Abs(suma) <= 15.0f)
         {
-            this.transform.Rotate(-1.5f, 0.0f, 0.0f,Space.World);
+            this.transform.Rotate(-1.5f, 0.0f, 0.0f);
             suma += 1.5f;
         }
     }

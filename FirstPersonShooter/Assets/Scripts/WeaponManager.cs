@@ -49,11 +49,14 @@ public class WeaponManager : MonoBehaviour {
         }
 		else if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
-            // ## TO-DO 4 - Llamar a ManageWeapon con el índice adecuado (1)
             ManageWeapon(1);
         }
         else if(Input.GetKeyDown(KeyCode.Alpha3)){
             ManageWeapon(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            ManageWeapon(3);
         }
     }
 

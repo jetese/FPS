@@ -107,7 +107,7 @@ public class Shoot : MonoBehaviour
                 BackWeaponMove();
                 // ## TO-DO 5 - En función de si hay proyectil o no, usar la función de disparo
                 // con proyectil, o la de disparo con rayo ## 
-                if(m_IsAutomatic){
+                if(m_IsAutomatic && !this.name.Equals("AutomaticLauncher")){
                     ShootRay();
                 }
                 else{
